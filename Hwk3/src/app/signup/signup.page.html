@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-item>
+      <ion-label color="primary" position="floating">email</ion-label>
+      <ion-input type="text" [(ngModel)]="user.email" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" position="floating">password</ion-label>
+      <ion-input type="text" [(ngModel)]="user.password" required></ion-input>
+    </ion-item>
+    <ion-list>
+  <ion-radio-group>
+    <ion-list-header>
+      User Type
+    </ion-list-header>
+    <ion-item>
+         <ion-icon slot="start" name="person-add" size="large" color="tertiary"></ion-icon>
+         <ion-label position="floating">User Type</ion-label>
+         <ion-select slot="end" [(ngModel)]="userType" interface="alert">
+           <ion-select-option>Visitor</ion-select-option>
+           <ion-select-option>Store Owner</ion-select-option>
+         </ion-select>
+       </ion-item>
+    <!-- <ion-item>
+      <ion-label>Visitor</ion-label>
+      <ion-radio value="visitor"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Store Owner</ion-label>
+      <ion-radio value="owner"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Delivery Staff</ion-label>
+      <ion-radio value="delivery-staff"></ion-radio>
+    </ion-item> -->
+  </ion-radio-group>
+</ion-list>
+
+    <ion-button class="submit-btn" expand="block" type="submit" (click)="signup()">Sign up</ion-button>
+
+</ion-content>
