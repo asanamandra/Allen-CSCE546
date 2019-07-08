@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button (click)="goToMyOrders()"slot="start" size="small">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title>Order Details Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+    <ion-item>
+      <ion-label>Name</ion-label>
+      {{current_order.itemName}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Total Item Number</ion-label>
+      {{current_order.totalItems}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Total Price</ion-label>
+      {{current_order.totalPrice}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Date</ion-label>
+      {{current_order.date}}
+    </ion-item>
+  </ion-list>
+
+</ion-content>

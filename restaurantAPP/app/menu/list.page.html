@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Menu
+    </ion-title>
+    <ion-buttons slot="end" size="small">
+     <ion-button (click)="openNewItemPage()">
+      <ion-icon slot="icon-only" name="add-circle"></ion-icon>
+    </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img src="/assets/menu.gif"></ion-img>
+  <ion-list>
+    <ion-item (click)="openItemDetailPage(item) "*ngFor="let item of menus">
+      {{item.name}}
+    </ion-item>
+  </ion-list>
+</ion-content>

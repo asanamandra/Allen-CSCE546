@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button (click)="goToMenu()"slot="start" size="small">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title>Item Details</ion-title>
+    <ion-button (click)="createOrder(quantity)" slot="end" size="small">
+      <ion-icon name="cart"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list>
+  <ion-item>
+    <ion-img src="{{current_item.photo}}"></ion-img>
+  </ion-item>
+  <ion-item>
+    <ion-label>Name</ion-label>
+    {{current_item.name}}
+  </ion-item>
+  <ion-item>
+    <ion-label>category</ion-label>
+    {{current_item.category}}
+  </ion-item>
+  <ion-item>
+    <ion-label>Price</ion-label>
+    {{current_item.price}}
+  </ion-item>
+  <ion-item>
+    <ion-label>Description</ion-label>
+    {{current_item.description}}
+  </ion-item>
+  <ion-item>
+      <ion-label>Quantity</ion-label>
+      <ion-range color="danger" pin="true" min="1"></ion-range>
+  </ion-item>
+</ion-list>
+</ion-content>
